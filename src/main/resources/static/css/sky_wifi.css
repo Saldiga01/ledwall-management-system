@@ -1,0 +1,107 @@
+body, html, h1,p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per il contenitore del cartellone */
+.billboard {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding:0;
+    background: radial-gradient(circle, #ff8e74, #efc3fa);
+}
+
+.logo-section img {
+    width:  45vw;
+    margin-top: 5%;
+    padding: 0;
+    animation-name: zoomInOut;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.content-section {
+    text-align: center;
+    margin-top: 2%; /* Metto margine sopra per separare dal logo */
+}
+
+#scritta-grande{
+    font-size: 3vw;
+    color: #4a3977;
+    margin-bottom: 3vh; /*  margine sotto per separare dai paragrafi */
+    padding: 0;
+    font-family: "Comme", sans-serif;
+}
+
+#scrittaDinamica {
+    font-size: 3vw; /* Dimensione del paragrafo */
+    color: #4a3977;
+    padding: 0;
+    position: relative;
+    -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;/
+    margin-top: 10%; /* Aggiungo margine sopra per separare dal titolo */
+    font-family: fantasy;
+    word-spacing: 0.2vw;
+    letter-spacing: 0.1vw;
+
+}
+
+
+#small-text {
+    font-size: 1.3vw;
+    color: #ff00ae;
+    margin-top: 2%; /*  margine sopra per separare dai paragrafi */
+    font-family: "Comme", sans-serif;
+}
+
+.offerta {
+    font-size: 3vw;
+    font-family: fantasy;
+    color: #ff00ae;
+    margin-top: 1.5%
+}
+
+
+@keyframes zoomInOut {
+    0%, 100% { transform: scale(0.8); } /* Dimensione normale */
+    50% { transform: scale(0.9); } /* Ingrandimento del 10% */
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+

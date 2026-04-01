@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:simpleType name="stringtype">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="inttype">
+        <xs:restriction base="xs:positiveInteger"/>
+    </xs:simpleType>
+    
+    <xs:element name="palinsesto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="advertisement" type="advertisementType" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="idPalinsesto" type="inttype" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="advertisementType">
+        <xs:sequence>
+            <xs:element name="file" type="stringtype"/>
+            <xs:element name="duration" type="inttype"/>
+        </xs:sequence>
+        <xs:attribute name="idCartellone" type="inttype" use="required"/>
+    </xs:complexType>
+
+</xs:schema>
+

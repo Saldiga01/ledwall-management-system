@@ -1,0 +1,138 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url("../images/dolcegabbana2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+#div-img-prf{
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+
+#img-prf{
+    width: 100%;
+    height: auto;
+    animation: heartbeat 2.5s ease-in-out infinite both;
+    animation-delay: 2s;
+}
+#div-logo-dolce{
+    padding-left: 7%;
+    padding-top: 1%;
+}
+
+#logo-dolce2{
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 17.4%;
+    z-index: 2;
+    animation: heartbeat 2.5s ease-in-out infinite both;
+    animation-delay: 2s;
+}
+
+#div-text{
+    margin-left: 7%;
+}
+
+#title{
+    margin: 0;
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-size: 2vw;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#descr{
+    color: white;
+    font-family: "Times New Roman", serif;
+    font-size: 1.5vw;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#logo-dolce {
+    animation: wobble-hor-bottom 2.8s  infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: translateX(15px) rotate(2.6deg);
+        transform: translateX(15px) rotate(2.6deg);
+    }
+    15% {
+        -webkit-transform: translateX(-15px) rotate(-2.6deg);
+        transform: translateX(-15px) rotate(-2.6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(2.6deg);
+        transform: translateX(15px) rotate(2.6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-2.6deg);
+        transform: translateX(-15px) rotate(-2.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(15px) rotate(2.6deg);
+        transform: translateX(15px) rotate(2.6deg);
+    }
+    75% {
+        -webkit-transform: translateX(-15px) rotate(-2.6deg);
+        transform: translateX(-15px) rotate(-2.6deg);
+    }
+}
+

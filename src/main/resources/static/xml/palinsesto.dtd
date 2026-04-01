@@ -1,0 +1,7 @@
+<!ELEMENT palinsesto (advertisement+)>
+<!ATTLIST palinsesto id CDATA #REQUIRED>
+<!ELEMENT advertisement (file,duration)>
+<!ELEMENT file (#PCDATA)>
+<!ELEMENT duration (#PCDATA)>
+
+

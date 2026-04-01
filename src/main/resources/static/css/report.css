@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+#p-empty {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+#reportResult {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding-bottom: 30px;
+}
+
+
+#impressioni-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 20px auto;
+    margin-top: 35px;
+    max-width: 1200px;
+}
+#table-impressioni, #canvas-div {
+    width: 40%;
+}
+#table-impressioni {
+    margin-right: 20px;
+}
+#table-impressioni th{
+    padding: 12px;
+    text-align: center; /* Centra il testo all'interno delle celle */
+    font-size: 15px;
+}
+
+#table-impressioni td{
+    padding: 5px;
+    text-align: center; /* Centra il testo all'interno delle celle */
+    font-size: 20px;
+}
+#canvas-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    width: 100%;
+}
+
+
+
+
+#stats-div{
+    margin-top: 20px;
+}
+.statistica {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.statistica:hover {
+    transform: translateY(-5px);
+}
+.statistica .label {
+    font-size: 16px;
+    color: #666;
+}
+.statistica .value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff0000;
+}
+.statistica .unit {
+    font-size: 18px;
+    color: #888;
+    margin-left: 10px;
+}
+.statistica .number {
+    display: flex;
+    align-items: baseline;
+}
+
+
+h4{
+    margin-top: 30px;
+}
+#segnalazioni-list {
+
+}
+.rounded-table {
+    width: 100%;
+    border-collapse: collapse; /* Assicurati che i bordi delle celle siano uniti */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #000000; /* Opzionale: per avere un bordo esterno */
+}
+.rounded-table th, .rounded-table td {
+    border: 1px solid #ddd; /* Bordi interni delle celle */
+    padding: 12px;
+}
+.rounded-table th {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+}
+
+
+#error-message {
+    color: red;
+    text-align: left;
+}
+
+

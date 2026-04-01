@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE ledWall SYSTEM "ledWall.dtd">-->
+
+<palinsesto idPalinsesto="3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="palinsesto.xsd">
+    <advertisement idCartellone="102">
+        <file>/html/dolce&amp;gabbana.html</file>
+        <duration>7</duration>
+    </advertisement>
+    <advertisement idCartellone="104">
+        <file>/html/McDonalds.html</file>
+        <duration>35</duration>
+    </advertisement>
+    <advertisement idCartellone="109">
+        <file>/html/onePlus.html</file>
+        <duration>12</duration>
+    </advertisement>
+    <advertisement idCartellone="105">
+        <file>/html/radio105.html</file>
+        <duration>8</duration>
+    </advertisement>
+    <advertisement idCartellone="103">
+        <file>/html/juve_abbonamenti.html</file>
+        <duration>7</duration>
+    </advertisement>
+</palinsesto>
+

@@ -1,0 +1,207 @@
+body {
+    background-image: url("../images/sfondo_legno.PNG");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+}
+
+#container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+#header {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 3.1vw;
+    font-family: "Baskerville Old Face", serif;
+    width: 100%;
+    margin: 0;
+}
+
+#p-banner {
+    text-align: center;
+    color: white;
+    font-size: 1.4vw;
+    background-color: #ab2222;
+    padding: 0.4%;
+    margin-top: 0;
+}
+
+#p-lower{
+    text-align: center;
+    color: white;
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 0;
+    animation: scrollBanner 35s linear infinite;
+
+}
+#div-lower{
+    background-color: #ab2222;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    overflow: hidden;
+    white-space: nowrap;    /* fa in modo che il testo non esca dal contenuto durante l'animazione*/
+}
+
+@keyframes scrollBanner {
+    0% {transform: translateX(80%);}
+    100% {transform: translateX(-120%);}
+}
+
+main{
+    flex: 2;
+    width: 60%;
+    margin-bottom: 0;
+}
+aside{
+    flex: 1;
+    width: 100%;
+}
+
+#left-image{
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+}
+
+#div-sx{
+    padding-top: 2%;
+    padding-left: 8%;
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#div-bottom-sx{
+    display: flex;
+    align-items: center;
+}
+
+#main-title{
+    text-align: center;
+    font-family: "Baskerville Old Face", serif;
+    font-size: 2vw;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+
+#scritta-sogni{
+    width: 77%;
+    height: 20%;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    margin-bottom: 1.9%;
+    padding-left: 7%;
+}
+
+.h3-dx{
+    font-size: 2vw;
+    font-family: "Baskerville Old Face", serif;
+    text-align: left;
+    margin-left: 2%;
+
+}
+
+.right-images{
+    width: 100%;
+}
+
+#img1-dx{
+    width:60%;
+    padding-left: 10%;
+
+}
+#img2-dx {
+    width: 55%;
+    padding-left: 10%;
+}
+
+#sale-logo1{
+    width: 9%;
+    margin-left: 1%;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+#mini-div1, #mini-div2{
+    display: flex;
+    align-items: center;
+
+}
+
+.sale-logo2{
+    width: 12%;
+    margin-left: 1%;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.tabbed{
+    display: inline-block;
+    text-indent: 120%;
+}
+
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+

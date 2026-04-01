@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE ledWall SYSTEM "ledWall.dtd">-->
+
+<palinsesto idPalinsesto="2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="palinsesto.xsd">
+    <advertisement idCartellone="106">
+        <file>/html/michelin.html</file>
+        <duration>35</duration>
+    </advertisement>
+    <advertisement idCartellone="107">
+        <file>/html/sector.html</file>
+        <duration>11</duration>
+    </advertisement>
+    <advertisement idCartellone="108">
+        <file>/html/relaxdasogno.html</file>
+        <duration>37</duration>
+    </advertisement>
+    <advertisement idCartellone="109">
+        <file>/html/onePlus.html</file>
+        <duration>9</duration>
+    </advertisement>
+    <advertisement idCartellone="110">
+        <file>/html/sky_wifi.html</file>
+        <duration>7</duration>
+    </advertisement>
+</palinsesto>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE palinsesto SYSTEM "palinsesto.dtd">-->
+
+<palinsesto idPalinsesto="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="palinsesto.xsd">
+    <advertisement idCartellone="101">
+        <file>/html/casa-di-carta.html</file>
+        <duration>10</duration> <!-- Durata della riproduzione-->
+    </advertisement>
+    <advertisement idCartellone="102">
+        <file>/html/dolce&amp;gabbana.html</file>
+        <duration>8</duration>
+    </advertisement>
+    <advertisement idCartellone="103">
+        <file>/html/juve_abbonamenti.html</file>
+        <duration>9</duration>
+    </advertisement>
+    <advertisement idCartellone="104">
+        <file>/html/McDonalds.html</file>
+        <duration>35</duration>
+    </advertisement>
+    <advertisement idCartellone="105">
+        <file>/html/radio105.html</file>
+        <duration>12</duration>
+    </advertisement>
+</palinsesto>

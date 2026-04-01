@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: red;
+}
+
+.message {
+    font-size: 14vh;
+    font-weight: bold;
+    animation: blink 2s infinite;
+}
+
+
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 10%;
+    }
+}

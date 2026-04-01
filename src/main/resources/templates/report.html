@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportistica Cartelloni Pubblicitari</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" th:href="@{/css/report.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header th:insert="~{fragments/header :: block-header}"></header>
+
+<div class="container">
+    <h1>Reportistica Cartelloni Pubblicitari</h1>
+    <form id="reportForm">
+        <label for="idInserito">Seleziona ID Cartellone:</label>
+        <select id="idInserito" name="idInserito">
+            <option th:each="cartellone : ${cartellone}"
+                    th:value="${cartellone.id}"
+                    th:text="${cartellone.id}">
+            </option>
+        </select>
+
+        <label for="startDate">Data Inizio:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">Data Fine:</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <button type="button" onclick="generateReport()">Genera Report</button>
+    </form>
+    <p id="error-message"></p>
+</div>
+
+
+<div th:if="${segnalazioni != null && !segnalazioni.isEmpty()}" id="reportResult" class="container">
+    <h2 th:text="'Statistiche cartellone con ID: ' + ${id}">Titolo</h2>
+    <div id="impressioni-div">
+        <table id="table-impressioni" class = rounded-table>
+            <thead>
+            <tr>
+                <th>ID impianto</th>
+                <th>Impressioni</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="key, iterStat : ${idImpianti}">
+                <td th:text="${key}">ID impianto</td>
+                <td th:text="${impressioniImpianti[iterStat.index]}">Impressioni</td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="canvas-div"><canvas id="impressionsChart"></canvas></div>
+
+    </div>
+
+    <div id="stats-div">
+        <div class="statistica">
+            <div class="label">Durata totale</div>
+            <div class="number">
+                <span class="value" th:text="${durataTotale}"></span>
+                <span class="unit">secondi</span>
+            </div>
+        </div>
+
+        <div class="statistica">
+            <div class="label">Visualizzato in</div>
+            <div class="number">
+                <span class="value" th:text="${numImpianti}"></span>
+                <span class="unit">impianti diversi</span>
+            </div>
+        </div>
+
+        <div class="statistica">
+            <div class="label">Impressioni totali</div>
+            <div class="number">
+                <span class="value" th:text="${impressioni}"></span>
+                <span class="unit">impressioni</span>
+            </div>
+        </div>
+    </div>
+    <h4>Elenco di tutte le visualizzazioni</h4>
+    <div id="segnalazioni-list">
+        <table class = rounded-table>
+            <thead>
+            <tr>
+                <th>ID cartellone</th>
+                <th>ID impianto</th>
+                <th>ID palinsesto</th>
+                <th>Timestamps</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="segnalazione : ${segnalazioni}">
+                <td th:text="${segnalazione.refIdcartellone}"></td>
+                <td th:text="${segnalazione.refIdimpianto}"></td>
+                <td th:text="${segnalazione.refIdpalinsesto}"></td>
+                <td th:text="${segnalazione.timestamps}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div th:if="${segnalazioni != null && segnalazioni.isEmpty()}" id="p-empty" class="container">
+    <h2 th:text="'Statistiche cartellone con ID: ' + ${id}">Titolo</h2>
+    <p>Nessun risultato per il periodo selezionato</p>
+</div>
+
+
+<script th:inline="javascript">
+    var ctx = document.getElementById('impressionsChart').getContext('2d');
+    var data = {
+        labels: /*[[${idImpianti}]]*/ [],
+        datasets: [{
+            label: 'Impressioni',
+            data: /*[[${impressioniImpianti}]]*/ [],
+            backgroundColor: 'rgba(255, 165, 0,0.82)',
+            borderColor: 'rgb(0,0,0)',
+            borderWidth: 2
+        }]
+    };
+
+    var impressionsChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    ticks: {
+                        precision: 0,
+                        beginAtZero: true
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<script src="/js/report.js"></script>
+<footer th:insert="~{fragments/footer :: block-footer}"></footer>
+</body>
+</html>

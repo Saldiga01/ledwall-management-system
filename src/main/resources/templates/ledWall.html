@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impianto</title>
+    <link rel="stylesheet" th:href="@{/css/ledWall.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+</head>
+<body>
+
+<div id="ledWall"></div>
+<div id="bottomBar">
+    <!-- Contenuto della barra in basso -->
+    <p><span id="currentDate" class="spanInfo"></span> </p>
+    <p><span id="currentTime" class="spanInfo"></span> </p>
+    <p><span id="cityInfo" class="spanInfo"></span> </p>
+    <div id="weatherDiv">
+        <p><span id="weatherInfo" class="spanInfo"></span></p>
+        <img id="weatherIcon" src="" alt="Weather Icon">
+    </div>
+    <p><span id="temperatureInfo" class="spanInfo"></span> </p>
+</div>
+
+
+<script>
+    var pathPalinsesto = "[[${impianto.pathPalinsesto}]]";
+    var id = "[[${impianto.id}]]";
+    var stato = [[${impianto.stato}]];
+    console.log((stato))
+</script>
+<script src="/js/palinsesto.js"></script>
+
+</body>
+</html>

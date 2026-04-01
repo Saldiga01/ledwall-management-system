@@ -1,0 +1,331 @@
+body,html{
+    margin: 0;
+    padding:0;
+    background-image: url("../images/stadio-di-calcio-juventus-paesaggio-notturno.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contenitore{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding:0;
+}
+
+.intestazione{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding:0;
+}
+
+#\ effetto1{
+    font-size: 1.8vw;
+    color: #FF0000;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+    text-shadow:
+            -1px -1px 0 #ffdd00,
+            1px -1px 0 #ffdd00,
+            -1px  1px 0 #ffdd00,
+            1px  1px 0 #ffdd00;
+    position: absolute;
+    right: 8.5vw;
+    top: 1.5vh;
+    line-height: 1vh;
+    -webkit-animation: slide-right 0.2s steps(2, end) infinite ;
+    animation: slide-right 0.5s steps(2, end) infinite ;
+}
+
+#hastagh{
+    font-size: 2vw;
+    font-weight: bold;
+    margin-right: auto; /* Spinge l'elemento al centro */
+    color: white;
+}
+
+.primo-blocco,
+.Secondo-blocco {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding:0;
+}
+
+#titolo\ {
+    font-size: 4.5vw;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Lilita One', sans-serif;
+    border: 4px double rgb(248, 213, 41);
+    border-width: 4px 0;
+    margin: 0;
+    padding:0;
+}
+
+span {
+    text-shadow: 0 0 80vw rgba(255,255,255,.5); /* Aggiunge un'ombra al testo*/
+    /* Clip Sfondo Imaggine */
+    background: url(../images/Flag-of-Italy-01.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 6s linear infinite;
+}
+
+#p1{
+    left: 50%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffdd00;
+    font-weight: bold;
+    font-size:1.8vw;
+    animation: battito 1s infinite alternate;
+    margin: 2%;
+}
+
+#p2{
+    left: 50%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffdd00;
+    font-size:1.5vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+@-webkit-keyframes aitf {
+    0% { background-position: 0 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+      translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+         translateX(100px);
+        transform: translateX(100px);
+    }
+}
+@keyframes slide-right {
+    0% {
+         translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+       translateX(100px);
+        transform: translateX(100px);
+    }
+}
+
+#\ logo\ juve{
+    margin-top: 0;
+    position: relative;
+    -webkit-animation: bounce-in-fwd 1.3s both;
+    animation: bounce-in-fwd 1.3s both;
+}
+
+#effetto2 {
+    font-size: 1.8vw;
+    color: #FF0000;
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+    text-shadow:
+            -1px -1px 0 #ffdd00,
+            1px -1px 0 #ffdd00,
+            -1px  1px 0 #ffdd00,
+            1px  1px 0 #ffdd00;
+    position: absolute;
+    left: 8.5vw;
+    bottom: 1vh; /*per spostare l'elemento in basso */
+    -webkit-animation: slide-left 0.2s steps(2, end) infinite;
+    animation: slide-left 0.5s steps(2, end) infinite;
+}
+
+#ScrittaJuve {
+    color: white;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.3vw;
+    line-height: 1vh;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: glitch 1s infinite;
+}
+
+
+@-webkit-keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100px); /* Spostamento verso sinistra */
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100px); /* Spostamento verso sinistra */
+    }
+}
+
+
+@-webkit-keyframes bounce-in-fwd {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: scale(0.84);
+        transform: scale(0.84);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    89% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes bounce-in-fwd {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: scale(0.84);
+        transform: scale(0.84);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    89% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+@keyframes battito {
+    0% {
+        transform: scale(1); /* Il cuore è alla sua dimensione originale */
+    }
+    100% {
+        transform: scale(1.3); /* Il cuore è ingrandito al 20% */
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: none;
+        opacity: 1;
+        color: white;
+    }
+    25% {
+        transform: translate(2px, -2px);
+        opacity: 0.8;
+        color: #ffffff; /* Cambia il colore del testo durante l'animazione */
+    }
+    50% {
+        transform: translate(-2px, 2px);
+        opacity: 0.8;
+        color: #ffffff; /* Cambia il colore del testo durante l'animazione */
+    }
+    75% {
+        transform: translate(2px, 2px);
+        opacity: 0.8;
+        color: #ffffff; /* Cambia il colore del testo durante l'animazione */
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+        color: white;
+    }
+}
