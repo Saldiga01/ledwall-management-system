@@ -106,7 +106,11 @@ function updateDateTime() {
 
 // Funzione per aggiornare le informazioni meteo
 function updateWeatherInfo() {
-    var apiKey = 'e80d248d9ba5e84730bdecdb38cfbbe7';
+    var apiKey = typeof openWeatherApiKey !== 'undefined' ? openWeatherApiKey : '';
+    if (!apiKey) {
+        console.warn("OpenWeather API key is missing. Skipping weather update.");
+        return;
+    }
     var city = 'Palermo';
     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=it`;
 

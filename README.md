@@ -17,12 +17,13 @@ This project is built using modern and reliable technologies:
 - **Automated Tracking:** The screens send periodic signals to the backend to guarantee they are alive and to update impression metrics.
 
 ## 📸 Screenshots
-*(Replace these placeholder links with your actual screenshots)*
 
-![Dashboard GUI](images/placeholder1.png)
+![Dashboard GUI](screenshots/Admin_Dashboard.png)
 *Admin Dashboard for LedWall configuration.*
+![Reports Dashboard](screenshots/reports_example.png)
 
-![LedWall View](images/placeholder2.png)
+
+![LedWall View](screenshots/ledWall_example.png)
 *Frontend view of an active LedWall.*
 
 ## 🚀 How to Install and Run
@@ -34,11 +35,18 @@ Thanks to Docker, running this project is incredibly easy! You don't need to man
 ### Setup Instructions
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/r-gab01/ledwall-management-system.git
+   cd ledwall-management-system
    ```
 
-2. **Start the application:**
+2. **Configure API Keys:**
+   Create a `.env` file in the root directory to store your OpenWeather API key. You can do this by executing:
+   ```bash
+   echo "OPENWEATHER_API_KEY=your_personal_api_key_here" > .env
+   ```
+   *(Or just create a `.env` file manually and paste `OPENWEATHER_API_KEY=your_key` inside).*
+
+3. **Start the application:**
    Open your terminal in the project folder and run:
    ```bash
    docker compose up --build
@@ -46,8 +54,8 @@ Thanks to Docker, running this project is incredibly easy! You don't need to man
    *Docker will automatically download Java, compile the Spring Boot application, and set up the MySQL database with some initial dummy data.*
 
 3. **Access the Application:**
-   - **LedWall View:** http://localhost:8080/ledWall?id=2
-   - **Admin Login:** http://localhost:8080/login *(Use the default credentials located in the `init.sql` file)*
+   - **LedWall View:** http://localhost:8080/ledWall?id=1
+   - **Admin Login:** http://localhost:8080/login *(username: admin; password: admin)*
 
 ### Stop the Application
 To stop the execution, press `Ctrl+C` in your terminal or run:
