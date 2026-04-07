@@ -15,6 +15,10 @@ public class SegnalazioneService {
     @Autowired
     private SegnalazioneRepository segnalazioneRepository;
 
+    public Segnalazione save(Segnalazione segnalazione) {
+        return segnalazioneRepository.save(segnalazione);
+    }
+
     public List<Segnalazione> getAllSegnalazioni() {
         return segnalazioneRepository.findAll();
     }

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: progetto_wsda_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: gestione_ledwall
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: .
+    container_name: progetto_wsda_app
+    ports:
+      - "8080:8080"
+    environment:
+      - MYSQL_HOST=db
+    depends_on:
+      - db
+    restart: on-failure
+
+volumes:
+  mysql_data:

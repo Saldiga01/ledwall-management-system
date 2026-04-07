@@ -11,6 +11,8 @@ public class Utente {
     private Integer id;
     @Column(name = "username")
     private String username;
+    @Column(name = "email")
+    private String email;
     @Column(name = "pass")
     private String password;
     @Column(name = "enabled")
@@ -30,6 +32,9 @@ public class Utente {
     public String getUsername() {
         return username;
     }
+    public String getEmail() {
+        return email;
+    }
     public String getPassword() {
         return password;
     }
@@ -43,6 +48,10 @@ public class Utente {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setPassword(String password) {
